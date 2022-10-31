@@ -1,4 +1,4 @@
-package aula_01_stream;
+package aula_00_stream;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -8,9 +8,9 @@ import java.util.List;
 // import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
-import aula_01_stream.model.Categoria;
-import aula_01_stream.model.Produto;
-import aula_01_stream.model.Produto.Status;
+import aula_00_stream.model.Categoria;
+import aula_00_stream.model.Produto;
+import aula_00_stream.model.Produto.Status;
 
 public class MapCollect {
     public static void main(String[] args) {

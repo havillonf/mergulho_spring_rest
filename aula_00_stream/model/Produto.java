@@ -1,4 +1,4 @@
-package aula_01_stream.model;
+package aula_00_stream.model;
 
 import java.math.BigDecimal;
 
