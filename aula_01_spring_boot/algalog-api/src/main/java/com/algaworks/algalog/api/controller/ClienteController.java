@@ -31,12 +31,17 @@ public class ClienteController {
 
 	@GetMapping("/clientes/{clienteId}")
 	public ResponseEntity<Cliente> buscar(@PathVariable long clienteId){
-		Optional<Cliente> cliente = clienteRepository.findById(clienteId);
+		//implementação funcional
+		return clienteRepository.findById(clienteId)
+				.map(cliente -> ResponseEntity.ok(cliente))
+				.orElse(ResponseEntity.notFound().build());
 
-		if(cliente.isPresent()){
-			return ResponseEntity.ok(cliente.get());
-		}
+		// Optional<Cliente> cliente = clienteRepository.findById(clienteId);
 
-		return ResponseEntity.notFound().build();
+		// if(cliente.isPresent()){
+		// 	return ResponseEntity.ok(cliente.get());
+		// }
+
+		// return ResponseEntity.notFound().build();
 	}
 }
